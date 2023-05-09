@@ -1,0 +1,7 @@
+non-primative data type in python
+- list
+- Tuple
+- Dict
+- Set 
+
+# list 

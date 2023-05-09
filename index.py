@@ -73,6 +73,9 @@ while expression:
 '''
 
 i = 1
-while i <=3:
-    print("hello world", i)
-    i+=1
+summation = 0
+while i <=5:
+    summation +=i 
+    print("Value of sum = ", summation)
+    i+=1 #1, 2,3,4,5
+print("total summation is = ", summation)
