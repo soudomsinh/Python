@@ -59,6 +59,7 @@ class Employee2():
 
 
 # obj2 = Employee2("Sara", "Accountant", 4000 ) 
+# obj2._showData2()
 # obj2.name = "Joey"
 # print(obj2._name)
 # obj2._name = "Julia"
@@ -75,7 +76,7 @@ Sara    # Name can't be modified. The output is still Sara because obj2.name = "
 Julia
 name = Julia   #Now, name get modified because an underscore (_) get added in front of _name
 Department = Accountant  
-Salary = 4000 # Salary get modified to 10,000
+Salary = 10000 # Salary get modified to 10,000
 
 '''
 
@@ -97,11 +98,11 @@ class Employee3():
 
 # creating object -> obj1, obj2, obj3
 
-obj3 = Employee3("Tommy", "Manager",  7000) 
-obj3._name = "Christopher"
-obj3.__department = "President"
-obj3.__salary = 10000
-obj3._showData3()
+# obj3 = Employee3("Tommy", "Manager",  7000) 
+# obj3._name = "Christopher"
+# obj3.__department = "President"
+# obj3.__salary = 10000
+# obj3._showData3()
 
 
 ''''
