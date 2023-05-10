@@ -21,8 +21,8 @@ class Employee():
 obj1 = Employee("John", 5000, "IT" )
 obj1.showData()
 obj1.salary = 7000    # modifying value in class
-obj1.name = "John Doe" # new value in class of name
-obj1.department = "Manager" # new value in class of name
+obj1.name = "John Doe" # new value in parameter of name
+obj1.department = "Manager" # new value in parameter of department
 
 obj1.showData()
 
