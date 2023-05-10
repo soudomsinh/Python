@@ -1,12 +1,12 @@
 '''
 Encapsulation has three level of access modifier such as public, protected, and private
-1. public meaning anyone and access and modify the values inside class
-2. protected meaning anyone can acess and modify values inside class but with some limitation. Using one "_" (underscore)
-3. private meaning no one can access and modify the values inside class. Using two "__" (two underscores)
+1. public meaning anyone and access and modify the values within and outside the class
+2. protected meaning anyone can acess and modify values within and outside the class but with some limitation. Using one "_" (underscore)
+3. private meaning NO one can access and modify the values inside class. Using two "__" (two underscores)
 
 
 class Employee():
-    def __init__(self, name,department,salary): # this a private attribute because there are two underscores
+    def __init__(self, name,department,salary): # this a private attribute because there are two underscores in ```__init__```
         self.name = name            # this is a public attribute(Accessible within or outside of class)
         self._department = department    # this is a protected attribute(accessible within the class and sub-class)
         self.__salary = salary          #  This is a private attribute(Accessible only within a class)
@@ -37,8 +37,8 @@ class Employee1():
 # obj1.showData1()
 
 ''''
-output: salary = 7000 # value of salary can get modified
-output: name = Neo Anderson # value of name can get modified
+output: salary = 7000 # value of salary get modified to 7000 from 5000
+output: name = Neo Anderson # value of name can modified to Neo Anderson from John
 
 '''
 
@@ -59,7 +59,6 @@ class Employee2():
 
 
 # obj2 = Employee2("Sara", "Accountant", 4000 ) 
-# obj2._showData2()
 # obj2.name = "Joey"
 # print(obj2._name)
 # obj2._name = "Julia"
