@@ -76,7 +76,7 @@ Sara    # Name can't be modified. The output is still Sara because obj2.name = "
 Julia
 name = Julia   #Now, name get modified because an underscore (_) get added in front of _name
 Department = Accountant  
-Salary = 10000 # Salary get modified to 10,000
+Salary = 4000 # Salary get modified to 10,000
 
 '''
 
@@ -98,18 +98,18 @@ class Employee3():
 
 # creating object -> obj1, obj2, obj3
 
-# obj3 = Employee3("Tommy", "Manager",  7000) 
-# obj3._name = "Christopher"
-# obj3.__department = "President"
-# obj3.__salary = 10000
-# obj3._showData3()
+obj3 = Employee3("Tommy", "Manager",  7000) 
+obj3._name = "Christopher"
+obj3.__department = "President"
+obj3.__salary = 10000
+obj3._showData3()
 
 
 ''''
 output:
 
 name = Christopher  # name get modified to Christopher 
-Department =  Manager  #Department did not get modified to President because it's private with two underscores
+Department =  Manager  #Department did not get modified to President
 Salary = 7000   # Salary did not get modified to 10,000 because it's private with two underscores
 
 '''
