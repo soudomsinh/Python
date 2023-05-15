@@ -3,8 +3,8 @@ inheritance allows us to define a class that inherits all the methods and proper
 Parent class is the class being inherited from, also called base class. 
 Child class is the class that inherits from another class, also called derived class.
 
-Superclass ---> parent class
-Subclass   ---> Child class
+Superclass ---> use when we want to 
+Subclass   
 
 class Person:        # Person is the superclass                
     name = ""  
@@ -15,7 +15,7 @@ class Person:        # Person is the superclass
     def showName(self):  
         print(self.name)  
   
-class Student(Person): 				# Student inherits from Person superclass
+class Student(Person):      # Student inherits from Person superclass
     studentClass = ""  
 
 '''
@@ -42,37 +42,41 @@ class Employee():    # Superclass ---> parent class
 # Subclass
 class Accountant(Employee):
     _departmentName = "Accounting"
-    def __init__(self):
-        pass
-        # Below are instance variable
-        # self.__name = name                    
-        # self._department = department       
-        # self.__salary = salary  
+    def __init__(self, name, salary):
+        super().__init__(name, salary, self._departmentName)
+        super()._showData()
+        
+
 
 class Programmer(Employee):
-    _department = "Programmer"
-    def __init__(self):
-        pass
+    _departmentName = "Programmer"
+    def __init__(self, name, salary):
+        super().__init__(name, salary, self._departmentName)
+        super()._showData()
+      
 
 class Sale(Employee):
     _departmentName = "Sale"
-    def __init__(self):
-        pass
+    def __init__(self, name, salary): 
+        super().__init__(name, salary, self._departmentName)
+        super()._showData()
+
+    
 #     pass
 
 
 
 
-account = Accountant()
-print(account.companyName)
+account = Accountant("Sophie", 3000)
+# account._showData()
+
+sale = Sale("John", 2500)
+# sale._showData()
+
+programmer = Programmer("Neo", 4000)
+# programmer._showData()
 
 
-
-
-# sale = Sale()
-
-
-programmer = Programmer()
 # print(programmer.__minSalary) #AttributeError: 'Programmer' object has no attribute '__minSalary' bacause __minSalary is private
-print(programmer._Employee__minSalary) # this one works if desire to access private attribute
-print(programmer.maxSalary) # attribute is public
+# print(programmer._Employee__minSalary) # this one works if desire to access private attribute
+# print(programmer.maxSalary) # attribute is public
