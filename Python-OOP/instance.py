@@ -38,28 +38,34 @@ class Employee():    # Superclass ---> parent class
         print("Department = ",format(self._department)) 
         print("Salary = ",format(self.__salary)) 
 
+    def _getIncome(self):
+        return self.__salary * 12
+    
+    def __str__(self):
+        return ("Employee name = {},  Salary {}, Department = {}, Annual Income = {} ".format(self.__name, self.__salary, self._department, self._getIncome()))
+
 
 # Subclass
 class Accountant(Employee):
     _departmentName = "Accounting"
     def __init__(self, name, salary):
-        super().__init__(name, salary, self._departmentName)
-        super()._showData()
+        super().__init__(name, self._departmentName, salary)
+        # super()._showData()
         
 
 
 class Programmer(Employee):
     _departmentName = "Programmer"
     def __init__(self, name, salary):
-        super().__init__(name, salary, self._departmentName)
-        super()._showData()
+        super().__init__(name,  self._departmentName, salary)
+        # super()._showData()
       
 
 class Sale(Employee):
     _departmentName = "Sale"
     def __init__(self, name, salary): 
-        super().__init__(name, salary, self._departmentName)
-        super()._showData()
+        super().__init__(name, self._departmentName, salary)
+        # super()._showData()
 
     
 #     pass
@@ -69,9 +75,11 @@ class Sale(Employee):
 
 account = Accountant("Sophie", 3000)
 # account._showData()
+print(account.__str__())
 
 sale = Sale("John", 2500)
 # sale._showData()
+print(sale.__str__())
 
 programmer = Programmer("Neo", 4000)
 # programmer._showData()
