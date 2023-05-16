@@ -81,8 +81,10 @@ sale = Sale("John", 2500)
 # sale._showData()
 print(sale.__str__())
 
-programmer = Programmer("Neo", 4000)
+programmer = Programmer("Neo", 7000)
 # programmer._showData()
+print(programmer.__str__())
+
 
 
 # print(programmer.__minSalary) #AttributeError: 'Programmer' object has no attribute '__minSalary' bacause __minSalary is private
