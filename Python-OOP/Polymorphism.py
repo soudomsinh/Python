@@ -24,8 +24,9 @@ class Employee():    # Superclass ---> parent class
         print("Department = ",format(self._department)) 
         print("Salary = ",format(self.__salary)) 
 
-    def _getIncome(self):
-        return self.__salary * 12
+    
+    def _getIncome(self, commission=0):
+        return (self.__salary * 12) + commission
     
     def __str__(self):
         return ("Employee name = {},  Salary = {}, Department = {}, Annual Income = {} ".format(self.__name, self.__salary, self._department, self._getIncome()))
@@ -37,6 +38,7 @@ class Accountant(Employee):
     def __init__(self, name, salary, age):
         super().__init__(name, self._departmentName, salary)
         self.__age = age
+        
         
     def _showData(self): 
         super()._showData()
@@ -63,6 +65,9 @@ class Programmer(Employee):
 
     def __str__(self):
         return (super().__str__() + "Exeperience = {} year(s), Skill = {} ".format(self.__exper, self.__skill))
+    
+   
+
         
 
 class Sale(Employee):
@@ -82,6 +87,8 @@ class Sale(Employee):
 
 account = Accountant("Sophie", 3000, 30)
 print(account.__str__())
+print("Commission = " + str(account._getIncome(1500)))
+# print("Total Earning = " + str(account._getIncome))
 programmer = Programmer("Neo", 7000, 3, "Game Development, Data Science")
 print(programmer.__str__())
 sale = Sale("John", 2500, "New York")
